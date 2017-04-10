@@ -15,6 +15,15 @@ request('https://api.meetup.com/self/calendar?key=1a2c3f15f671076496f10484554301
 			var date = new Date(responseJSON[key].time);
 
 			console.log( date.toLocaleDateString('de-DE', options) + ': ' + responseJSON[key].group['name']);
+
+			var date = new Date(responseJSON[key].time);
+			date.toUTCString();
+			var hours = date.getHours();
+			var minutes = "0" + date.getMinutes();
+			var formattedTime = hours + ':' + minutes.substr(-2);
+
+
+			console.log('Time: ' + formattedTime);
 			console.log('Topic: ' + responseJSON[key].name);
 
 

@@ -2,7 +2,7 @@
   "name": "meetup-tool",
   "version": "1.0.0",
   "description": "meetup tool for filling calendar with meetups and write an email with all details",
-  "main": "index.js",
+  "main": "meetup-api.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "clear": "0.0.1",
+    "google-auth-library": "^0.10.0",
+    "googleapis": "^19.0.0",
     "request": "^2.75.0"
   }
 }

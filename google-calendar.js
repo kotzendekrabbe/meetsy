@@ -1,5 +1,4 @@
-const meetupEvents = require('./meetup-api');
-
+var fetchMeetupEventData = require('./meetup-api');
 
 var fs = require('fs');
 var readline = require('readline');
@@ -23,8 +22,6 @@ fs.readFile('googleApi_clientSecret.json', function processClientSecrets(err, co
 	// Google Calendar API.
 	//authorize(JSON.parse(content), listEvents);
 	authorize(JSON.parse(content), creatEvent);
-
-
 });
 
 /**
@@ -140,36 +137,32 @@ function listEvents(auth) {
 // https://developers.google.com/google-apps/calendar/quickstart/node
 // Change the scope to 'https://www.googleapis.com/auth/calendar' and delete any
 // stored credentials.
-
+function createEvents(meetupEvents, auth) {
+	for(key in meetupEvents.meetupEvent){
+		insertEvent(meetupEvents.meetupEvent[key], auth);
+	}
+}
 
 
 function creatEvent(auth) {
-	var dateStart = new Date('2017-05-27T07:00:00').toISOString();
-	var dateEnd = new Date('2017-05-27T08:00:00').toISOString();
-	
+	fetchMeetupEventData.then(function(meetupEvents){
+		createEvents(meetupEvents, auth);
+	});
+}
 
-
-	var event = {
-		'start': { 'dateTime': meetupEvents.meetupEvents.dateStart },
-		'end': { 'dateTime': meetupEvents.meetupEvents.dateEnd },
-		'location': meetupEvents.meetupEvents.location,
-		'summary': meetupEvents.meetupEvents.title,
-		'description': meetupEvents.meetupEvents.link
-	};
-
-
+function insertEvent(eventData, auth){
 	var calendar = google.calendar('v3');
-
 
 	calendar.events.insert({
 		auth: auth,
 		calendarId: 'sinnerschrader.com_522i9j7lrlhpv0keltf0o2u2as@group.calendar.google.com',
-		resource: event,
+		resource: eventData,
 	}, function(err, response) {
 		if (err) {
 			console.log('The API returned an error: ' + err);
 			return;
 		}
-		console.log('Event created: %s', event.htmlLink);
+		console.log('Event created: %s', eventData.htmlLink);
 	});
 }
+

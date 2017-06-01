@@ -9,9 +9,10 @@
   "author": "Felicitas Kugland",
   "license": "ISC",
   "dependencies": {
-    "clear": "0.0.1",
     "google-auth-library": "^0.10.0",
-    "googleapis": "^19.0.0",
-    "request": "^2.75.0"
+    "googleapis": "^19.0.0"
+  },
+  "devDependencies": {
+    "node-fetch": "^1.7.0"
   }
 }

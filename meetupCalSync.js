@@ -8,15 +8,15 @@ var meetupApiKey;
 
 var cli = meow(`
     Usage
-      $ node google-calendar.js
+    $ node meetup-calendar-sync.js
  
     Options
-	  --meetupApiKey meetup Api url of your account
-      --calID google calendar ID (sinnerschrader.com_un89alcfa2f0orh9bmnhpdosic@group.calendar.google.com)
+	--meetupApiKey meetup Api url of your account
+    --calID google calendar ID (sinnerschrader.com_un89alcfa2f0orh9bmnhpdosic@group.calendar.google.com)
  
     Examples
-      $ foo unicorns --rainbow
-      unicorns
+    $ foo unicorns --rainbow
+    unicorns
 `);
 
 

@@ -1,7 +1,7 @@
 {
   "name": "meetup-tool",
   "version": "1.0.0",
-  "description": "meetup tool for filling calendar with meetups and write an email with all details",
+  "description": "meetup tool for filling google calendar with meetup events",
   "main": "meetup-api.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "google-auth-library": "^0.10.0",
-    "googleapis": "^19.0.0"
+    "googleapis": "^19.0.0",
+    "meow": "^3.7.0"
   },
   "devDependencies": {
     "node-fetch": "^1.7.0"

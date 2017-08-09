@@ -9,26 +9,21 @@ module.exports = {
 			})
 			.then(function(json) {
 				for(var key in json) {
-
+					var venue = 'Needs a location';
 					var date = new Date(json[key].time);
-					var calDate = date.toISOString();
-
 					var dateEnd = new Date(json[key].time);
 					dateEnd.setHours(dateEnd.getHours() + 3);
 
-					var calDateEnd = dateEnd.toISOString();
-
-					var venue = 'Needs a location';
 
 					if(json[key].venue) {
 						venue = json[key].venue['name'] +
-							', ' + json[key].venue['address_1'] +
-							', ' + json[key].venue['city'];
+						', ' + json[key].venue['address_1'] +
+						', ' + json[key].venue['city'];
 					}
 
 					meetupEvents.push({
-						"start"  : {'dateTime' : calDate},
-						'end': { 'dateTime': calDateEnd },
+						"start"  : {'dateTime' : date.toISOString()},
+						'end': { 'dateTime': dateEnd.toISOString()},
 						"summary" : json[key].name,
 						"location": venue,
 						"description":  json[key].link
@@ -36,6 +31,9 @@ module.exports = {
 				}
 
 				return meetupEvents;
-			});
+			})
+			.catch(function(err){
+				console.log('error: ', err);
+			})
 	}
 };

@@ -141,6 +141,7 @@ module.exports = {
 
 		}).catch(function (err) {
 			console.log('Error loading client secret file: ' + err);
+			return;
 		});
 	},
 	insertEvent: function(eventData){

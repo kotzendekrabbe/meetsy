@@ -4,14 +4,14 @@ var googleCalAuth = require('./google-calendar-auth');
 
 var calID;
 var googleConnect;
-var meetupApiUrl;
+var meetupApiKey;
 
 var cli = meow(`
     Usage
       $ node google-calendar.js
  
     Options
-	  --meetupApiUrl meetup Api url of your account
+	  --meetupApiKey meetup Api url of your account
       --calID google calendar ID (sinnerschrader.com_un89alcfa2f0orh9bmnhpdosic@group.calendar.google.com)
  
     Examples
@@ -20,8 +20,8 @@ var cli = meow(`
 `);
 
 
-function fetchMeetupEvent(meetupApiUrl){
-	return fetchMeetupEventData.fetchMeetups(meetupApiUrl)
+function fetchMeetupEvent(meetupApiKey){
+	return fetchMeetupEventData.fetchMeetups(meetupApiKey)
 		.then(function(meetupEvents){
 			return meetupEvents;
 		});
@@ -38,7 +38,7 @@ function compareEvents(meetupEvent, calEvents) {
 
 function main(opts) {
 	calID = opts.calID;
-	meetupApiUrl = opts.meetupApiUrl;
+	meetupApiKey = opts.meetupApiKey;
 	googleConnect = googleCalAuth.connect(calID);
 
 	return googleConnect;
@@ -46,7 +46,7 @@ function main(opts) {
 
 main(cli.flags)
 	.then(function(googleConnect){
-		return fetchMeetupEvent(meetupApiUrl).then(function(meetup){
+		return fetchMeetupEvent(meetupApiKey).then(function(meetup){
 			return compareEvents(meetup, googleConnect);
 		});
 	}).then(function(existNot){

@@ -1,8 +1,8 @@
 {
-  "name": "meetup-tool",
+  "name": "meetupCalSync",
   "version": "1.0.0",
   "description": "meetup tool for filling google calendar with meetup events",
-  "main": "meetup-api.js",
+  "main": "meetupCalSync.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,9 +11,18 @@
   "dependencies": {
     "google-auth-library": "^0.10.0",
     "googleapis": "^19.0.0",
-    "meow": "^3.7.0"
+    "meow": "^3.7.0",
+    "node-fetch": "^1.7.2"
   },
   "devDependencies": {
     "node-fetch": "^1.7.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kotzendekrabbe/meetup-tool.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kotzendekrabbe/meetup-tool/issues"
+  },
+  "homepage": "https://github.com/kotzendekrabbe/meetup-tool#readme"
 }

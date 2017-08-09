@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var meow = require('meow');
 var fetchMeetupEventData = require('./meetup-api');
 var googleCalAuth = require('./google-calendar-auth');
@@ -53,5 +55,5 @@ main(cli.flags)
 		existNot.forEach(event => googleCalAuth.insertEvent(event));
 	})
 	.catch(function(err){
-		console.log(err);
+		console.log('Ups - something went wrong ', err);
 	});

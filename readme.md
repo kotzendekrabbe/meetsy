@@ -17,7 +17,7 @@ you can create a google calendar for  your company to share meetup events with y
 # Installation Instructions #
 ```node
 npm install
-´´´
+```
 
 ## Google calendar ##
 https://developers.google.com/google-apps/calendar/quickstart/nodejs
@@ -31,7 +31,7 @@ https://developers.google.com/google-apps/calendar/quickstart/nodejs
 
 ```node
 node meetupCalSync --calID 'yourGoogleCalenderID' --meetupApiKey 'yourMeetupApiKey'
-´´´
+```
 
 
 ## How to get you Google calendar ID ##

@@ -14,12 +14,12 @@ you can create a google calendar for  your company to share meetup events with y
 
 ---------------
 
-# Installation Instructions #
+## Installation Instructions ##
 ```node
 npm install
 ```
 
-## Google calendar ##
+### Google calendar ###
 https://developers.google.com/google-apps/calendar/quickstart/nodejs
 
 * follow the instructions from the link above on step 1 to get your client_secret.json
@@ -27,31 +27,35 @@ https://developers.google.com/google-apps/calendar/quickstart/nodejs
 
 ---------------
 
-# Usage Instructions #
+## Usage Instructions ##
 
 ```node
 node meetupCalSync --calID 'yourGoogleCalenderID' --meetupApiKey 'yourMeetupApiKey'
 ```
 
 
-## How to get you Google calendar ID ##
+### How to get your Google calendar ID/address ###
+https://support.google.com/calendar/answer/37083#link
+
+
+### How to get your meetup api key ###
+https://secure.meetup.com/de-DE/meetup_api/key/
 
 
 
-## How to get your meetup api key ##
-### https://secure.meetup.com/de-DE/meetup_api/key/ ###
 
 
 
 
-
-
-
-# Next features #
+## Next features ##
 See Issues
 
 
 
-# Contribute #
+## Contribute ##
 Feel free to dive in! Open an issue or submit a Pull Request. ❤️
 MeetupCalendarSync follows the Contributor Covenant Code of Conduct.
+
+---------------
+
+Copyright 2017 by SinnerSchrader Deutschland GmbH and contributors. Released under the MIT license.

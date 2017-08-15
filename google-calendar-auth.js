@@ -45,29 +45,31 @@ var authorize = function(credentials){
 	});
 };
 
-var getNewToken = function(oauth2Client) {
-	var authUrl = oauth2Client.generateAuthUrl({
-		access_type: 'offline',
-		scope: SCOPES
-	});
+var getNewToken =  function(oauth2Client){
+	return new Promise(function (resolve, reject) {
+		var authUrl = oauth2Client.generateAuthUrl({
+			access_type: 'offline',
+			scope: SCOPES
+		});
 
-	console.log('Authorize this app by visiting this url: ', authUrl);
-	var rl = readline.createInterface({
-		input: process.stdin,
-		output: process.stdout
-	});
+		console.log('Authorize this app by visiting this url: ', authUrl);
+		var readlineI = readline.createInterface({
+			input: process.stdin,
+			output: process.stdout
+		});
 
 
-	rl.question('Enter the code from that page here: ', function(code) {
-		rl.close();
-		oauth2Client.getToken(code, function(err, token) {
-			if (err) {
-				console.log('Error while trying to retrieve access token', err);
-				return;
-			}
-			oauth2Client.credentials = token;
-			storeToken(token);
-			return oauth2Client;
+		readlineI.question('Enter the code from that page here: ', function(code) {
+			readlineI.close();
+			oauth2Client.getToken(code, function(err, token) {
+				if (err) {
+					console.log('Error while trying to retrieve access token', err);
+					return;
+				}
+				oauth2Client.credentials = token;
+				storeToken(token);
+				return oauth2Client;
+			});
 		});
 	});
 };
@@ -89,13 +91,12 @@ var getEvents = function(auth, calID) {
 			auth: auth,
 			calendarId: calID,
 			timeMin: (new Date()).toISOString(),
-			maxResults: 30,
+			maxResults: 100,
 			singleEvents: true,
 			orderBy: 'startTime'
 		}, function(err, response) {
 			if(err) reject(err);
-
-			resolve(response.items);
+			else resolve(response.items);
 		});
 	});
 };
@@ -115,6 +116,7 @@ function createEvent(auth) {
 }
 
 function insertEvent(eventData, auth){
+	console.log('inserEvent is loading ...');
 	calendar.events.insert({
 		auth: auth,
 		calendarId: googleCalID,
@@ -145,6 +147,14 @@ module.exports = {
 		});
 	},
 	insertEvent: function(eventData){
-		return insertEvent(eventData, authGoogle);
+		console.log('inserEvent is next ...');
+		return insertEvent(eventData, authGoogle)
+			.then(function(){
+				return "ready";
+			})
+			.catch(function (err) {
+				console.log('Error loading client secret file: ' + err);
+				return;
+			});
 	}
 };

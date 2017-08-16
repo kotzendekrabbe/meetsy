@@ -31,7 +31,8 @@ function fetchMeetupEvent(meetupApiKey){
 
 function compareEvents(meetupEvent, calEvents) {
 	// Check which event already exist and which one not.
-	return meetupEvent.filter(i => !calEvents.find(e => i.description === e.description));
+	var eventsExistNot = meetupEvent.filter(i => !calEvents.find(e => i.description === e.description));
+	return eventsExistNot;
 }
 
 
@@ -46,10 +47,21 @@ function main(opts) {
 main(cli.flags)
 	.then(function(googleConnect){
 		return fetchMeetupEvent(meetupApiKey).then(function(meetup){
-			return compareEvents(meetup, googleConnect);
+			if(googleConnect.length > 0){
+				return compareEvents(meetup, googleConnect);
+			}
+			else {
+				meetup.forEach(event => googleCalAuth.insertEvent(event));
+				return 0;
+			}
 		});
 	}).then(function(existNot){
-		return existNot.forEach(event => googleCalAuth.insertEvent(event));
+		if(existNot.length === 0){
+			console.log('Everything is up to date');
+		}
+		else {
+			existNot.forEach(event => googleCalAuth.insertEvent(event));
+		}
 	})
 	.catch(function(err){
 		console.log('Ups - something went wrong ', err);

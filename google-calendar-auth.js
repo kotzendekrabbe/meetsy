@@ -52,11 +52,13 @@ var getNewToken =  function(oauth2Client){
 			scope: SCOPES
 		});
 
-		console.log('Authorize this app by visiting this url: ', authUrl);
 		var readlineI = readline.createInterface({
 			input: process.stdin,
 			output: process.stdout
 		});
+
+
+		console.log('Authorize this app by visiting this url: ', authUrl);
 
 
 		readlineI.question('Enter the code from that page here: ', function(code) {
@@ -78,7 +80,7 @@ var storeToken = function(token) {
 	try {
 		fs.mkdirSync(TOKEN_DIR);
 	} catch (err) {
-		if (err.code != 'EEXIST') {
+		if (err.code != 'EXIST') {
 			throw err;
 		}
 	}
@@ -101,22 +103,7 @@ var getEvents = function(auth, calID) {
 	});
 };
 
-function createEvents(meetupEvents, auth) {
-	for(key in meetupEvents.meetupEvent){
-		//console.log(meetupEvents.meetupEvent[key]);
-		insertEvent(meetupEvents.meetupEvent[key], auth);
-	}
-}
-
-
-function createEvent(auth) {
-	fetchMeetupEventData.then(function(meetupEvents){
-		createEvents(meetupEvents, auth);
-	});
-}
-
 function insertEvent(eventData, auth){
-	console.log('inserEvent is loading ...');
 	calendar.events.insert({
 		auth: auth,
 		calendarId: googleCalID,
@@ -129,7 +116,6 @@ function insertEvent(eventData, auth){
 		console.log('Event created: ' + eventData.start.dateTime + ' ' +  eventData.summary);
 	});
 }
-
 
 
 module.exports = {
@@ -147,14 +133,6 @@ module.exports = {
 		});
 	},
 	insertEvent: function(eventData){
-		console.log('inserEvent is next ...');
-		return insertEvent(eventData, authGoogle)
-			.then(function(){
-				return "ready";
-			})
-			.catch(function (err) {
-				console.log('Error loading client secret file: ' + err);
-				return;
-			});
+		return insertEvent(eventData, authGoogle);
 	}
 };

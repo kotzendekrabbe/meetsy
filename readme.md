@@ -1,3 +1,5 @@
+> Sync your Meetup events with Google Calendar
+
 # MeetupCalendarSync - MCS #
 
 Is a CLI tool which syncs your meetup events with your (google) calendar.
@@ -56,13 +58,13 @@ https://secure.meetup.com/de-DE/meetup_api/key/
 
 
 ## Contribute ##
-Feel free to dive in! Open an 
-[issue](https://github.com/kotzendekrabbe/meetup-tool/issues/new) or 
+Feel free to dive in! Open an
+[issue](https://github.com/kotzendekrabbe/meetup-tool/issues/new) or
 submit a [Pull Request](https://github.com/kotzendekrabbe/meetup-tool/compare). ❤️
 
 MeetupCalendarSync follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md).
 
 ---------------
 
-Copyright 2017 by SinnerSchrader Deutschland GmbH and contributors. 
+Copyright 2017 by SinnerSchrader Deutschland GmbH and contributors.
 Released under the MIT license.

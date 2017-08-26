@@ -6,6 +6,7 @@ You can also sync it with a shared google calendar with other,
 example:
 you can create a google calendar for  your company to share meetup events with your collegues.
 
+
 ## At the moment it's only a MVP: ##
 * get the next 30 meetup events
 * get the next 30 google events
@@ -13,6 +14,7 @@ you can create a google calendar for  your company to share meetup events with y
 * insert them into the calendar
 
 ---------------
+
 
 ## Installation Instructions ##
 ```node
@@ -26,6 +28,7 @@ https://developers.google.com/google-apps/calendar/quickstart/nodejs
 * save this datas at root project and rename it to "googleApi_clientSecret.json"
 
 ---------------
+
 
 ## Usage Instructions ##
 
@@ -45,17 +48,22 @@ https://secure.meetup.com/de-DE/meetup_api/key/
 
 
 
+---------------
 
 
 ## Next features ##
-See Issues
+[https://github.com/kotzendekrabbe/meetup-tool/issues?q=is%3Aissue+is%3Aopen+label%3Afeature][See Issues]
 
 
 
 ## Contribute ##
-Feel free to dive in! Open an issue or submit a Pull Request. ❤️
-MeetupCalendarSync follows the Contributor Covenant Code of Conduct.
+Feel free to dive in! Open an 
+[https://github.com/kotzendekrabbe/meetup-tool/issues/new][issue] or 
+submit a [https://github.com/kotzendekrabbe/meetup-tool/compare][Pull Request]. ❤️
+
+MeetupCalendarSync follows the [CODE_OF_CONDUCT.md][Contributor Covenant Code of Conduct].
 
 ---------------
 
-Copyright 2017 by SinnerSchrader Deutschland GmbH and contributors. Released under the MIT license.
+Copyright 2017 by SinnerSchrader Deutschland GmbH and contributors. 
+Released under the MIT license.

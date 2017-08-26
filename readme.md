@@ -9,9 +9,8 @@ you can create a google calendar for  your company to share meetup events with y
 
 ## At the moment it's only a MVP: ##
 * get the next 30 meetup events
-* get the next 30 google events
-* compare if there are events which not exist at the moment
-* insert them into the calendar
+* get the next 100 google events
+* compare events with each other, if there are events which are not existing insert these into the calendar
 
 ---------------
 

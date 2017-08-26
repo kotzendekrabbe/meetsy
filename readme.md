@@ -51,16 +51,16 @@ https://secure.meetup.com/de-DE/meetup_api/key/
 
 
 ## Next features ##
-[https://github.com/kotzendekrabbe/meetup-tool/issues?q=is%3Aissue+is%3Aopen+label%3Afeature][See Issues]
+[See Issues](https://github.com/kotzendekrabbe/meetup-tool/issues?q=is%3Aissue+is%3Aopen+label%3Afeature)
 
 
 
 ## Contribute ##
 Feel free to dive in! Open an 
-[https://github.com/kotzendekrabbe/meetup-tool/issues/new][issue] or 
-submit a [https://github.com/kotzendekrabbe/meetup-tool/compare][Pull Request]. ❤️
+[issue](https://github.com/kotzendekrabbe/meetup-tool/issues/new) or 
+submit a [Pull Request](https://github.com/kotzendekrabbe/meetup-tool/compare). ❤️
 
-MeetupCalendarSync follows the [CODE_OF_CONDUCT.md][Contributor Covenant Code of Conduct].
+MeetupCalendarSync follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md).
 
 ---------------
 

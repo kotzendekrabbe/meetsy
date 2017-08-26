@@ -1,21 +1,15 @@
 {
   "name": "meetupCalSync",
   "version": "1.0.0",
-  "description": "meetup tool for filling google calendar with meetup events",
-  "main": "meetupCalSync.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "Sync your Meetup events with Google Calendar",
+  "bin": "./cli.js",
   "author": "Felicitas Kugland",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "google-auth-library": "^0.10.0",
     "googleapis": "^19.0.0",
     "meow": "^3.7.0",
     "node-fetch": "^1.7.2"
-  },
-  "devDependencies": {
-    "node-fetch": "^1.7.0"
   },
   "repository": {
     "type": "git",

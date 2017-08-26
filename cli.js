@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 var meow = require('meow');
 var fetchMeetupEventData = require('./meetup-api');
 var googleCalAuth = require('./google-calendar-auth');
@@ -11,11 +10,11 @@ var meetupApiKey;
 var cli = meow(`
     Usage
     $ node meetup-calendar-sync.js
- 
+
     Options
 	--meetupApiKey meetup Api url of your account
     --calID google calendar ID (sinnerschrader.com_un89alcfa2f0orh9bmnhpdosic@group.calendar.google.com)
- 
+
     Examples
     $ foo unicorns --rainbow
     unicorns

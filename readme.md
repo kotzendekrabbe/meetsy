@@ -1,12 +1,11 @@
 > Sync your Meetup events with Google Calendar
 
-# MeetupCalendarSync - MCS #
+# meetsy #
 
 Is a CLI tool which syncs your meetup events with your (google) calendar.
 It could help you to have a better overview on upcoming events.
 You can also sync it with a shared google calendar with other,
-example:
-you can create a google calendar for  your company to share meetup events with your collegues.
+example: you can create a google calendar for your company to share Meetup events with your colleagues.
 
 
 ## At the moment it's only a MVP: ##
@@ -34,7 +33,7 @@ https://developers.google.com/google-apps/calendar/quickstart/nodejs
 ## Usage Instructions ##
 
 ```node
-node meetupCalSync --calID 'yourGoogleCalenderID' --meetupApiKey 'yourMeetupApiKey'
+node meetsy --calID 'yourGoogleCalenderID' --meetupApiKey 'yourMeetupApiKey'
 ```
 
 
@@ -62,7 +61,7 @@ Feel free to dive in! Open an
 [issue](https://github.com/kotzendekrabbe/meetup-tool/issues/new) or
 submit a [Pull Request](https://github.com/kotzendekrabbe/meetup-tool/compare). ❤️
 
-MeetupCalendarSync follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md).
+meetsy follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md).
 
 ---------------
 

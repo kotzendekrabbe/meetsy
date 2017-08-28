@@ -1,5 +1,5 @@
 {
-  "name": "meetupCalSync",
+  "name": "meetsy",
   "version": "1.0.0",
   "description": "Sync your Meetup events with Google Calendar",
   "bin": "./cli.js",

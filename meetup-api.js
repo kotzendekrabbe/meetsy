@@ -3,7 +3,7 @@ var fetch = require('node-fetch');
 module.exports = {
 	fetchMeetups: function(meetupApiKey){
 		var meetupEvents = [];
-		return fetch('https://api.meetup.com/self/calendar?key='+ meetupApiKey +'&page=30')
+		return fetch('https://api.meetup.com/self/calendar?key='+ meetupApiKey +'&page=1')
 			.then(function(res) {
 				return res.json();
 			})

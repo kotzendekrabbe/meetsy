@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 var meow = require('meow');
 var fetchMeetupEventData = require('./meetup-api');
 var googleCalAuth = require('./google-calendar-auth');
@@ -30,8 +31,10 @@ function fetchMeetupEvent(meetupApiKey){
 
 function compareEvents(meetupEvent, calEvents) {
 	// Check which event already exist and which one not.
-	var eventsExistNot = meetupEvent.filter(i => !calEvents.find(e => i.description === e.description));
-	return eventsExistNot;
+	// unique identifier is URL in description
+
+	return meetupEvent.filter(i => !calEvents.find(e => e.description.match(/\bhttps?:\/\/\S+/gi) == i.description));
+
 }
 
 
@@ -46,6 +49,7 @@ function main(opts) {
 main(cli.flags)
 	.then(function(googleConnect){
 		return fetchMeetupEvent(meetupApiKey).then(function(meetup){
+
 			if(googleConnect.length > 0){
 				return compareEvents(meetup, googleConnect);
 			}

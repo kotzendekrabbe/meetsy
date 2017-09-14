@@ -13,24 +13,37 @@ example: you can create a google calendar for your company to share Meetup event
 * get the next 100 google events
 * compare events with each other, if there are events which are not existing insert these into the calendar
 
+## What you need ##
+* google calendar for the meetup events
+* [meetup account](https://meetup.com/)
+* [npm and node](https://www.npmjs.com/get-np)
+
 ---------------
 
 
-## Installation Instructions ##
+## Installation ##
+
+### Get meetsy ###
+You can clone or download meetsy by using the "Clone or Download" Button above.
+
+### Install meetsy ###
+
 ```node
 npm install
 ```
+
+## Setup instructions ##
 
 ### Google calendar ###
 https://developers.google.com/google-apps/calendar/quickstart/nodejs
 
 * follow the instructions from the link above on step 1 to get your client_secret.json
-* save this datas at root project and rename it to "googleApi_clientSecret.json"
+* save this datas at project root and rename it to "googleApi_clientSecret.json"
 
 ---------------
 
 
-## Usage Instructions ##
+## Usage instructions ##
 
 ```node
 node meetsy --calID 'yourGoogleCalenderID' --meetupApiKey 'yourMeetupApiKey'
@@ -43,8 +56,6 @@ https://support.google.com/calendar/answer/37083#link
 
 ### How to get your meetup api key ###
 https://secure.meetup.com/de-DE/meetup_api/key/
-
-
 
 
 

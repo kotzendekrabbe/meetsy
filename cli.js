@@ -61,6 +61,9 @@ main(cli.flags)
 			}
 		});
 	}).then(function(existNot){
+		if (!Array.isArray(existNot)) {
+			return;
+		}
 		if(existNot.length === 0){
 			console.log('Everything is up to date');
 		}

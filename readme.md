@@ -64,14 +64,14 @@ https://secure.meetup.com/de-DE/meetup_api/key/
 
 
 ## Next features ##
-[See Issues](https://github.com/kotzendekrabbe/meetup-tool/issues?q=is%3Aissue+is%3Aopen+label%3Afeature)
+[See Issues](https://github.com/kotzendekrabbe/meetsy/issues?q=is%3Aissue+is%3Aopen+label%3Afeature)
 
 
 
 ## Contribute ##
 Feel free to dive in! Open an
-[issue](https://github.com/kotzendekrabbe/meetup-tool/issues/new) or
-submit a [Pull Request](https://github.com/kotzendekrabbe/meetup-tool/compare). ❤️
+[issue](https://github.com/kotzendekrabbe/meetsy/issues/new) or
+submit a [Pull Request](https://github.com/kotzendekrabbe/meetsy/compare). ❤️
 
 meetsy follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md).
 

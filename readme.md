@@ -35,7 +35,8 @@ npm install -g meetsy
 https://developers.google.com/google-apps/calendar/quickstart/nodejs
 
 * follow the instructions from the link above on step 1 to get your `client_secret.json`
-* save this data at project root and rename it to `googleApi_clientSecret.json`
+* save this JSON file anywhere  for later use as --secret (remember the path to the file!)
+* * in the meetsy example it's in the project root and named as googleApi_clientSecret.json
 
 ---------------
 

@@ -6,8 +6,8 @@
 
 Is a CLI tool which syncs your meetup events with your (google) calendar.
 It could help you to have a better overview on upcoming events.
-You can also sync it with a shared google calendar with other,
-example: you can create a google calendar for your company to share Meetup events with your colleagues.
+You can also sync it with a shared google calendar with others,
+e.g.: you can create a google calendar for your company to share Meetup events with your colleagues.
 
 
 ## At the moment it's only a MVP: ##
@@ -39,8 +39,8 @@ npm install
 ### Google calendar ###
 https://developers.google.com/google-apps/calendar/quickstart/nodejs
 
-* follow the instructions from the link above on step 1 to get your client_secret.json
-* save this datas at project root and rename it to "googleApi_clientSecret.json"
+* follow the instructions from the link above on step 1 to get your `client_secret.json`
+* save this data at project root and rename it to `googleApi_clientSecret.json`
 
 ---------------
 
@@ -48,8 +48,11 @@ https://developers.google.com/google-apps/calendar/quickstart/nodejs
 ## Usage instructions ##
 
 ```node
-node meetsy --calID 'yourGoogleCalenderID' --meetupApiKey 'yourMeetupApiKey'
+node ./cli.js --calID 'yourGoogleCalenderID' --meetupApiKey 'yourMeetupApiKey'
 ```
+
+*Note:* On first use you have to authorize the calender tool by a URL shown
+in your terminal.
 
 
 ### How to get your Google calendar ID/address ###

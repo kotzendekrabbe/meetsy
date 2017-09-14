@@ -1,6 +1,6 @@
 {
   "name": "meetsy",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Sync your Meetup events with Google Calendar",
   "bin": "./cli.js",
   "author": "Felicitas Kugland",
@@ -13,10 +13,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kotzendekrabbe/meetup-tool.git"
+    "url": "git+https://github.com/kotzendekrabbe/meetsy.git"
   },
   "bugs": {
-    "url": "https://github.com/kotzendekrabbe/meetup-tool/issues"
+    "url": "https://github.com/kotzendekrabbe/meetsy/issues"
   },
-  "homepage": "https://github.com/kotzendekrabbe/meetup-tool#readme"
+  "homepage": "https://github.com/kotzendekrabbe/meetsy#readme"
 }

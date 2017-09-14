@@ -23,13 +23,10 @@ e.g.: you can create a google calendar for your company to share Meetup events w
 
 ## Installation ##
 
-### Get meetsy ###
-You can clone or download meetsy by using the "Clone or Download" Button above.
-
 ### Install meetsy ###
 
 ```node
-npm install
+npm install -g meetsy
 ```
 
 ## Setup instructions ##
@@ -38,7 +35,8 @@ npm install
 https://developers.google.com/google-apps/calendar/quickstart/nodejs
 
 * follow the instructions from the link above on step 1 to get your `client_secret.json`
-* save this data at project root and rename it to `googleApi_clientSecret.json`
+* save this JSON file anywhere  for later use as --secret (remember the path to the file!)
+* * in the meetsy example it's in the project root and named as googleApi_clientSecret.json
 
 ---------------
 
@@ -46,7 +44,7 @@ https://developers.google.com/google-apps/calendar/quickstart/nodejs
 ## Usage instructions ##
 
 ```node
-node ./cli.js --calID 'yourGoogleCalenderID' --meetupApiKey 'yourMeetupApiKey'
+meetsy --calID 'yourGoogleCalenderID' --meetupApiKey 'yourMeetupApiKey' --secret './googleApi_clientSecret.json'
 ```
 
 *Note:* On first use you have to authorize the calender tool by a URL shown

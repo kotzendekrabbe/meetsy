@@ -12,7 +12,7 @@ var TOKEN_DIR = (process.env.HOME || process.env.HOMEPATH ||
 var TOKEN_PATH = TOKEN_DIR + 'calendar-nodejs-quickstart.json';
 
 var calendar = google.calendar('v3');
-var clientSecret = './googleApi_clientSecret.json';
+//var clientSecret = './googleApi_clientSecret.json';
 
 var authGoogle;
 var googleCalID;
@@ -119,7 +119,7 @@ function insertEvent(eventData, auth){
 
 
 module.exports = {
-	connect: function(calID){
+	connect: function(calID, clientSecret){
 		return fs.readFileAsync(clientSecret).then(function (content){
 			googleCalID = calID;
 			return authorize(JSON.parse(content)).then(function(auth){

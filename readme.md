@@ -46,7 +46,7 @@ https://developers.google.com/google-apps/calendar/quickstart/nodejs
 ## Usage instructions ##
 
 ```node
-node meetsy --calID 'yourGoogleCalenderID' --meetupApiKey 'yourMeetupApiKey'
+node meetsy --calID 'yourGoogleCalenderID' --meetupApiKey 'yourMeetupApiKey' --secret './googleApi_clientSecret.json'
 ```
 
 

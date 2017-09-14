@@ -7,6 +7,7 @@ var googleCalAuth = require('./google-calendar-auth');
 var calID;
 var googleConnect;
 var meetupApiKey;
+var clientSecret;
 
 var cli = meow(`
     Usage
@@ -15,6 +16,7 @@ var cli = meow(`
     Options
 	--meetupApiKey meetup Api url of your account
     --calID google calendar ID (sinnerschrader.com_un89alcfa2f0orh9bmnhpdosic@group.calendar.google.com)
+    --secret google API client Secret json
 
     Examples
     $ foo unicorns --rainbow
@@ -41,7 +43,7 @@ function compareEvents(meetupEvent, calEvents) {
 function main(opts) {
 	calID = opts.calID;
 	meetupApiKey = opts.meetupApiKey;
-	googleConnect = googleCalAuth.connect(calID);
+	googleConnect = googleCalAuth.connect(calID, opts.secret);
 
 	return googleConnect;
 }

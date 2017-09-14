@@ -12,7 +12,6 @@ var TOKEN_DIR = (process.env.HOME || process.env.HOMEPATH ||
 var TOKEN_PATH = TOKEN_DIR + 'calendar-nodejs-quickstart.json';
 
 var calendar = google.calendar('v3');
-//var clientSecret = './googleApi_clientSecret.json';
 
 var authGoogle;
 var googleCalID;

@@ -1,5 +1,3 @@
-[![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
-[![npm version](https://badge.fury.io/js/node.svg)](https://badge.fury.io/js/node)
 > Sync your Meetup events with Google Calendar
 
 # meetsy #
@@ -60,22 +58,6 @@ https://support.google.com/calendar/answer/37083#link
 https://secure.meetup.com/de-DE/meetup_api/key/
 
 
-
----------------
-
-## dependencies ##
-* node
-* npm
-* google-auth-library
-* googleapis
-* meow
-* node-fetch
-"": {
-    "google-auth-library": "^0.10.0",
-    "googleapis": "^19.0.0",
-    "meow": "^3.7.0",
-    "node-fetch": "^1.7.2"
-  }
 
 ---------------
 

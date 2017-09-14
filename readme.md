@@ -23,13 +23,10 @@ e.g.: you can create a google calendar for your company to share Meetup events w
 
 ## Installation ##
 
-### Get meetsy ###
-You can clone or download meetsy by using the "Clone or Download" Button above.
-
 ### Install meetsy ###
 
 ```node
-npm install
+npm install -g meetsy
 ```
 
 ## Setup instructions ##
@@ -46,7 +43,7 @@ https://developers.google.com/google-apps/calendar/quickstart/nodejs
 ## Usage instructions ##
 
 ```node
-node meetsy --calID 'yourGoogleCalenderID' --meetupApiKey 'yourMeetupApiKey' --secret './googleApi_clientSecret.json'
+meetsy --calID 'yourGoogleCalenderID' --meetupApiKey 'yourMeetupApiKey' --secret './googleApi_clientSecret.json'
 ```
 
 *Note:* On first use you have to authorize the calender tool by a URL shown
